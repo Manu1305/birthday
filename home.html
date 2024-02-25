@@ -1,0 +1,1671 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <style>
+
+
+.splash {
+    position: absolute;
+    background: #ffffff;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1032;
+    animation: splash-bg 7s 1s alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/* Splash Background Animation */
+
+@-webkit-keyframes splash-bg {
+    from {
+        background: #ffffff;
+    }
+    to {
+        background: #D1EDF5
+    }
+}
+
+@-moz-keyframes splash-bg {
+    from {
+        background: #ffffff;
+    }
+    to {
+        background: #D1EDF5
+    }
+}
+
+@-o-keyframes splash-bg {
+    from {
+        background: #ffffff
+    }
+    to {
+        background: #D1EDF5
+    }
+}
+
+@keyframes splash-bg {
+    from {
+        background: #ffffff;
+    }
+    to {
+        background: #D1EDF5
+    }
+}
+
+.splash .heart-loader {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    margin-left: -80px;
+    margin-top: -51px;
+    width: 160px;
+    height: 102px;
+    overflow: visible;
+}
+
+.splash .heart-loader-group {
+    transform-origin: 0 90px;
+}
+
+.splash .heart-left-loader,
+.splash .heart-right-loader {
+    stroke: #b8b8b8;
+    stroke-dasharray: 308.522, 308.522;
+    stroke-dashoffset: 308.522;
+}
+
+.splash .heart-left-loader {
+    animation: splash-left-heart-anim 5s 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    transform: translateX(0);
+}
+
+.splash .heart-right-loader {
+    animation: splash-right-heart-anim 5s 1s alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    transform: translate(62px, 12px);
+}
+
+.splash .heart-both-loader {
+    stroke: #F05157;
+    fill: transparent;
+    stroke-dasharray: 308.522, 308.522;
+    stroke-dashoffset: 308.522;
+    animation: splash-heart-anim 5s 1s alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes splash-left-heart-anim {
+    12% {
+        stroke-dashoffset: 188.522;
+        stroke: #b8b8b8;
+        fill: transparent;
+    }
+    31% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    41% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    43% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+    85% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+        stroke: #FF7E7E;
+        fill: #FF7E7E;
+        opacity: 1;
+    }
+}
+
+@keyframes splash-left-heart-anim {
+    12% {
+        stroke-dashoffset: 188.522;
+        stroke: #b8b8b8;
+        fill: transparent;
+    }
+    31% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        transform: translateX(0);
+    }
+    41% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        transform: translateX(0);
+    }
+    43% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        transform: translateX(0);
+        opacity: 1;
+    }
+    85% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+        transform: translateX(0);
+        opacity: 0;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: translateY(-2px);
+        stroke: #FF7E7E;
+        fill: #FF7E7E;
+        opacity: 1;
+    }
+}
+
+@keyframes splash-right-heart-anim {
+    12% {
+        stroke-dashoffset: 188.522;
+        fill: transparent;
+        stroke: #b8b8b8;
+    }
+    31% {
+        stroke-dashoffset: 0;
+        transform: translate(62px, 12px);
+        fill: transparent;
+        stroke: #b8b8b8;
+    }
+    41% {
+        stroke-dashoffset: 0;
+        transform: translate(62px, 12px);
+        fill: transparent;
+        stroke: #b8b8b8;
+    }
+    43% {
+        stroke-dashoffset: 0;
+        transform: translate(62px, 12px);
+        opacity: 1;
+        fill: transparent;
+        stroke: #b8b8b8;
+    }
+    85% {
+        stroke-dashoffset: 0;
+        transform: translate(62px, 12px);
+        opacity: 0;
+        fill: transparent;
+        stroke: #b8b8b8;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        transform: translate(62px, 10px);
+        stroke: #FF6B6C;
+        fill: #FF6B6C;
+        opacity: 1;
+    }
+}
+
+@keyframes splash-heart-anim {
+    55% {
+        stroke-dashoffset: 308.522;
+        fill: transparent;
+    }
+    70% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+    87% {
+        stroke-dashoffset: 0;
+        fill: #F05157;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: #F05157;
+    }
+}
+.total_views{
+    
+ margin-left: 40%;
+}
+  /* Full-screen modal styles */
+ <style>
+		/* Full-screen modal styles */
+		.modal {
+			display: none; /* Hide modal by default */
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0,0,0,0.8);
+		}
+
+		.modal-content {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+		}
+
+		/* Button styles */
+		.open-modal-button {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+		}
+    
+        /* Full-screen modal styles */
+        .modal {
+            display: none;
+            /* Hide modal by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    
+        .modal-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    
+        /* Button styles */
+        .open-modal-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+
+
+
+       
+        <!-- Font Awesome -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" /> 
+        <!-- Google Fonts 
+         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet" />
+         MDB
+       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" />
+        <!-- <script src="https://kit.fontawesome.com/bdd3a18581.js" crossorigin="anonymous"></script> -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>1305</title>
+        <link rel="icon" type="image/x-icon" href="images/tom jery.png">
+
+        <!-- CSS FILES -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/magnific-popup.css" rel="stylesheet">
+
+        <link href="css/tooplate-wedding-lite.css" rel="stylesheet">
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script> -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+            integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+
+    </head>
+    
+    <body>
+
+        <section class="preloader">
+        <div id="splash" role="progressbar">
+            <div class="splash">
+                <div class="logo-group">
+                    <svg class="heart-loader" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                        xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="119.813" height="75.5" viewBox="0 0 119.813 75.5"
+                        version="1.1">
+                        <g class="heart-loader-group">
+                            <path class="heart-both-loader" stroke-width="2" fill="none"
+                                d="M106.055,58.828 C104.558,60.390 106.853,68.616 109.886,73.658 C102.196,70.462 100.440,69.720 95.958,67.878 C92.728,70.405 89.119,72.951 85.099,75.500 C74.616,68.963 66.876,62.451 61.360,56.221 C71.999,45.765 82.515,30.874 79.354,15.367 C81.390,16.841 83.332,18.762 85.099,21.169 C103.175,-3.823 139.743,23.663 106.055,58.828 ZM25.985,61.223 C21.103,63.223 19.189,64.029 10.813,67.500 C14.117,62.025 16.616,53.091 14.986,51.395 C-21.710,13.208 18.123,-16.640 37.813,10.500 C60.893,-20.844 111.387,23.762 37.813,69.500 C33.434,66.731 29.502,63.967 25.985,61.223 Z" />
+                            <path class="heart-left-loader" stroke-width="1" fill="none"
+                                d="M37.813,10.500 C18.123,-16.640 -21.710,13.208 14.986,51.395 C16.616,53.091 14.117,62.025 10.813,67.500 C19.189,64.029 21.103,63.223 25.985,61.223 C29.502,63.967 33.434,66.731 37.813,69.500 C111.387,23.762 60.893,-20.844 37.813,10.500" />
+                            <path class="heart-right-loader" stroke-width="1" fill="none"
+                                d="M23.724,9.669 C41.800,-15.323 78.368,12.163 44.680,47.328 C43.183,48.890 45.478,57.116 48.511,62.158 C40.821,58.962 39.065,58.220 34.583,56.378 C31.353,58.905 27.744,61.451 23.724,64.000 C13.241,57.463 5.501,50.951 -0.015,44.721 C10.624,34.265 21.140,19.374 17.979,3.867 C20.015,5.341 21.957,7.262 23.724,9.669 Z" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        </section>
+
+  
+    
+    <!-- Button to trigger modal -->
+  
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <a href="" class="navbar-brand mx-auto mx-lg-0">
+                    <span>Sona</span>
+                    <i class="bi-heart brand-icon"></i>
+                    <span>Manu</span>
+                </a>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_1">Homepage</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2">Story</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3">Forever</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4">Her favorite</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">SnapShots</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_6">Wish her</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_7">Contact US</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <main>
+
+            <section class="hero-section d-flex" id="section_1">
+                <div class="hero-container container d-flex flex-column justify-content-end">
+                    <div class="row h-100">
+
+                        <div class="col-lg-6 col-12 my-auto">
+                            <h2>👋 Paaru,</h2>
+                            
+
+                            
+                           
+                            <h1 class="text-white hero-title mb-4">happy birthday my Love!</h1>
+
+                            <p class="text-white mb-2">
+                              
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="bearded-stylish-groom-suit-beautiful-blonde" class="bi bi-arrow-through-heart"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l.53-.53c-.771-.802-1.328-1.58-1.704-2.32-.798-1.575-.775-2.996-.213-4.092C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182a21.86 21.86 0 0 1-2.685-2.062l-.539.54V14a.5.5 0 0 1-.146.354l-1.5 1.5Zm2.893-4.894A20.419 20.419 0 0 0 8 12.71c2.456-1.666 3.827-3.207 4.489-4.512.679-1.34.607-2.42.215-3.185-.817-1.595-3.087-2.054-4.346-.761L8 4.62l-.358-.368c-1.259-1.293-3.53-.834-4.346.761-.392.766-.464 1.845.215 3.185.323.636.815 1.33 1.519 2.065l1.866-1.867a.5.5 0 1 1 .708.708L5.747 10.96Z" />
+                            </svg>
+                                Words are not enough to express my feelings for you.
+                            </p>
+                            
+                            <p class="text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="bearded-stylish-groom-suit-beautiful-blonde"
+                                class="bi bi-arrow-through-heart" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l.53-.53c-.771-.802-1.328-1.58-1.704-2.32-.798-1.575-.775-2.996-.213-4.092C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182a21.86 21.86 0 0 1-2.685-2.062l-.539.54V14a.5.5 0 0 1-.146.354l-1.5 1.5Zm2.893-4.894A20.419 20.419 0 0 0 8 12.71c2.456-1.666 3.827-3.207 4.489-4.512.679-1.34.607-2.42.215-3.185-.817-1.595-3.087-2.054-4.346-.761L8 4.62l-.358-.368c-1.259-1.293-3.53-.834-4.346.761-.392.766-.464 1.845.215 3.185.323.636.815 1.33 1.519 2.065l1.866-1.867a.5.5 0 1 1 .708.708L5.747 10.96Z" />
+                            </svg>
+                            You make my life worth living.
+                            </p>
+
+                            <a href="#section_2" class="custom-link custom-btn btn mt-4">Discover More</a>
+                        </div>
+                        <div id="app" @click="onClick"><i id="bubbleradius"></i><span v-for="(c, index) in circles" :style="style(c)"
+                                :key="c.key" :class="{ popped: c.popped }">&nbsp;</span></div>
+
+
+                        <div class="col-lg-3 col-12 save-the-date-wrap mt-auto ms-lg-auto">
+                            <div class="save-the-date-thumb">
+                                <h4 class="save-the-date-title">Queen's DaY</h4>
+
+                                <div class="save-the-date-body">
+                                    <span class="date">13th March</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="about-section section-padding" id="section_2">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h2 class="section-title">The Story</h2>
+
+                                <div class="section-title-bottom">
+                                    <span class="section-title-line"></span>
+                                    <i class="section-title-icon bi-heart-fill"></i>
+                                    <span class="section-title-line"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-12">
+                            <div class="image-hover-thumb">
+                                <img src="images/WhatsApp Image 2023-03-06 at 21.44.08.jpg" class="about-image img-fluid" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-12">
+                            <div class="about-info-wrap d-flex flex-column">
+                                <div class="about-info-title d-flex align-items-center my-3">
+                                    <h4>Sona</h4>
+
+                                    <span class="about-tag ms-2">Birthday queen</span>
+                                </div>
+
+                                <p>Once upon a time,⌛ there was a girl👧 named Sona. She was born in chagnasserry 🪴 to a loving family 💖 who
+                                adored her from the moment she was born 👪. As a child, she was full of energy ⚡ and always curious about the
+                            world around her. at her 17 she met me I changed her name from sona to paaru 😍.Paaru's love for me is boundless, and we have created countless unforgettable moments that will remain etched in our
+                            hearts forever.🤍  </p>
+
+                                <div class="social-icon-wrap mt-auto">
+                                    <ul class="social-icon ms-auto">
+                                        <!-- <li class="social-icon-item"><a href="https://www.facebook.com/Manu.kallooppara" class="social-icon-link bi-facebook"></a></li> -->
+
+                                        <!-- <li class="social-icon-item"><a href="#" class="social-icon-link bi-twitter"></a></li> -->
+
+                                        <li class="social-icon-item"><a href="https://www.instagram.com/m05j13s/" class="social-icon-link bi-instagram"></a></li>
+
+                                        <!-- <li class="social-icon-item"><a href="#" class="social-icon-link bi-whatsapp"></a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-12">
+                            <div class="image-hover-thumb">
+                                <img src="images/atluluuu.jpg" class="about-image img-fluid" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-12">
+                            <div class="about-info-wrap d-flex flex-column">
+                                <div class="about-info-title d-flex align-items-center my-3">
+                                    <h4>We have been together for almost six years.</h4>
+
+                                    <!-- <span class="about-tag ms-2">We </span> -->
+                                </div>
+
+                                <p>As the weeks and months passed, Me and Paaru grew closer and closer. We went on adventures
+                                together, tried new things, and made unforgettable memories. We laughed, cried, and supported each other through thick
+                                and thin..</p>
+
+                                <p>Love you a lot my dear ....🤍</p>
+
+                                <div class="social-icon-wrap mt-auto">
+                                    <ul class="social-icon ms-auto">
+                                        <!-- <li class="social-icon-item"><a href="#" class="social-icon-link bi-facebook"></a></li>
+
+                                        <li class="social-icon-item"><a href="#" class="social-icon-link bi-twitter"></a></li> -->
+
+                                        <li class="social-icon-item"><a href="https://www.instagram.com/m05j13s/" class="social-icon-link bi-instagram"></a>
+                                        </li>
+
+                                        <!-- <li class="social-icon-item"><a href="#" class="social-icon-link bi-whatsapp"></a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="the-wedding-section section-bg section-padding" id="section_3">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h2 class="section-title">Forever</h2>
+
+                                <div class="section-title-bottom">
+                                    <span class="section-title-line"></span>
+                                    <i class="section-title-icon bi-heart-fill"></i>
+                                    <span class="section-title-line"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12 d-flex flex-column mb-4 mb-lg-0 mb-md-0">
+                            <div class="image-hover-thumb">
+                                <img src="images/paaru at 3.jpg" class="img-fluid" alt="">
+                            </div>
+
+                            <div class="section-block">
+                                <h3 class="my-3">My girl at 3 👩‍👦</h3>
+
+                                <p class="mb-2">
+                                    <i class="bi-geo-alt me-1"></i>
+                                    Changanassery , kerala
+                                </p>
+
+                                <!-- <p>
+                                    <i class="bi-clock me-1"></i>
+                                    5:00 PM
+                                </p> -->
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12 d-flex flex-column mb-4 mb-lg-0 mb-md-0">
+                            <div class="image-hover-thumb">
+                                <img src="images/superhero.jpg" class="img-fluid" alt="">
+                            </div>
+
+                            <div class="section-block">
+                                <h3 class="my-3">with her superhero 🦸</h3>
+
+                                <p class="mb-2">
+                                    <i class="bi-geo-alt me-1"></i>
+                                    Alappuzha, kerala
+                                </p>
+
+                                <!-- <p>
+                                    <i class="bi-clock me-1"></i>
+                                    6:30 PM to 9:30 PM
+                                </p> -->
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12 d-flex flex-column mb-4 mb-lg-0 mb-md-0">
+                            <div class="image-hover-thumb">
+                                <img src="images/me.jpg" class="img-fluid" alt="">
+                            </div>
+                        
+                            <div class="section-block">
+                                <h3 class="my-3">with Me 🥰😘</h3>
+                        
+                                <p class="mb-2">
+                                    <i class="bi-geo-alt me-1"></i>
+                                    kallooppara, kerala
+                                </p>
+                        
+                                <!-- <p>
+                                    <i class="bi-clock me-1"></i>
+                                    6:30 PM to 9:30 PM
+                                </p> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="people-section section-padding" id="section_4">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h2 class="section-title">Her favorite</h2>
+
+                                <div class="section-title-bottom">
+                                    <span class="section-title-line"></span>
+                                    <i class="section-title-icon bi-heart-fill"></i>
+                                    <span class="section-title-line"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-5 col-12 me-auto">
+                            <nav>
+                                <div class="nav nav-tabs flex-lg-column align-items-baseline" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-groomsmen-tab" data-bs-toggle="tab" data-bs-target="#nav-groomsmen" type="button" role="tab" aria-controls="nav-groomsmen" aria-selected="true">
+                                        <h3>her dream Places</h3>
+                                    </button>
+
+                                    <button class="nav-link" id="nav-bridesmaid-tab" data-bs-toggle="tab" data-bs-target="#nav-bridesmaid" type="button" role="tab" aria-controls="nav-bridesmaid" aria-selected="false">
+                                        <h3>Her beloved flavors </h3>
+                                    </button>
+
+                                    <button class="nav-link" id="nav-bridesmaid-tab1" data-bs-toggle="tab" data-bs-target="#nav-bridesmaid1" type="button"
+                                        role="tab" aria-controls="nav-bridesmaid" aria-selected="false">
+                                        <h3>her favored watchables </h3>
+                                    </button>
+
+                                    <button class="nav-link" id="nav-bridesmaid-tab2" data-bs-toggle="tab" data-bs-target="#nav-bridesmaid2" type="button"
+                                        role="tab" aria-controls="nav-bridesmaid" aria-selected="false">
+                                        <h3>Her esteemed celebrity</h3>
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+
+                        <div class="col-lg-8 col-md-6 col-12">
+                            <div class="tab-content" id="nav-tabContent">
+
+                                <div class="tab-pane fade show active" id="nav-groomsmen" role="tabpanel" aria-labelledby="nav-groomsmen-tab">
+                                    <div class="row">
+                                       <div class="col-lg-6 col-12">
+                                            <div class="people-thumb image-hover-thumb">
+                                                <img src="images/Disneyland-Background-Wallpapers.jpg" class="people-image img-fluid" alt="">
+                                            </div>
+                                       </div> 
+
+                                       <div class="col-lg-6 col-12">
+                                            <div class="section-block">
+                                                <div class="d-flex align-items-center my-3">
+                                                    <h4 class="mb-0">Disney land</h4>
+
+                                                    <span class="about-tag ms-2">California</span>
+                                                </div>
+
+                                                <p>Your dream of visiting Disneyland is as magical and enchanting as you are, my love. I can't wait to see the joy in your
+                                                eyes as we explore the lands of whimsy and adventure together, hand in hand we want to make more unforgettable moments...</p>
+                                            </div>
+                                       </div> 
+
+                                       <div class="col-lg-6 col-12">
+                                            <div class="people-thumb image-hover-thumb">
+                                                <img src="images/maldivesssssssssssss.jpg" class="people-image img-fluid" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-12">
+                                            <div class="section-block">
+                                                <div class="d-flex align-items-center my-3">
+                                                    <h4 class="mb-0">Maldives</h4>
+
+                                                    
+                                                </div>
+
+                                                <p>Celebrating your birthday in the Maldives is one of my dream too, Surrounded by
+                                                a magnificent array of marine life, we can snorkel, scuba dive, or take a romantic stroll along the beaches while
+                                                enjoying the warm sunshine and gentle ocean breeze, and I
+                                                want to see the stunning paradise through your eyes.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade show" id="nav-bridesmaid" role="tabpanel" aria-labelledby="nav-bridesmaid-tab">
+                                    <div class="row">
+                                       <div class="col-lg-6 col-12">
+                                            <div class="people-thumb image-hover-thumb">
+                                                <img src="images/bubuly.jpeg" class="people-image img-fluid" alt="">
+                                            </div>
+                                       </div> 
+
+                                       <div class="col-lg-6 col-12">
+                                            <div class="section-block">
+                                                <div class="d-flex align-items-center my-3">
+                                                    <h4 class="mb-0">Dairy milk</h4>
+
+                                                    <span class="about-tag ms-2"></span>
+                                                </div>
+
+                                                <p>Her passion for Dairy Milk is unparalleled, but when it comes to the velvety smoothness and bubbly texture of Dairy Milk
+                                                Bubbly, her love knows no bounds</p>
+                                            </div>
+                                       </div> 
+
+                                       <div class="col-lg-6 col-12">
+                                            <div class="people-thumb image-hover-thumb">
+                                                <img src="images/AdobeStock_505402811_Preview (1).jpeg" class="people-image img-fluid" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-6 col-12">
+                                            <div class="section-block">
+                                                <div class="d-flex align-items-center my-3">
+                                                    <h4 class="mb-0">Masala dosa</h4>
+
+                                                    <span class="about-tag ms-2"></span>
+                                                </div>
+
+                                                <p>Paaru's love for masala dosa suggests that she has an adventurous palate and is willing to try new and unique flavors.
+                                                It takes a certain level of culinary curiosity and open-mindedness to appreciate the intricate flavors and textures of
+                                                masala dosa." </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="tab-pane fade show" id="nav-bridesmaid1" role="tabpanel" aria-labelledby="nav-bridesmaid-tab">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12">
+                                            <div class="people-thumb image-hover-thumb">
+                                                <img src="images/cook with komali.jpg" class="people-image img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                
+                                        <div class="col-lg-6 col-12">
+                                            <div class="section-block">
+                                                <div class="d-flex align-items-center my-3">
+                                                    <h4 class="mb-0">Cook with Komali </h4>
+                                
+                                                    <span class="about-tag ms-2"></span>
+                                                </div>
+                                
+                                                <p>"Cook with Komaly" is a cooking show that features a charismatic and talented chef named Komaly. they creates delicious
+                                                and unique dishes that are both visually appealing and tasty. The show is filled with humor and lighthearted moments,
+                                                which make it a fun and entertaining watch. paaru likes this program very much</p>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="col-lg-6 col-12">
+                                            <div class="people-thumb image-hover-thumb">
+                                                <img src="images/om-shanti-oshana-movie.jpg" class="people-image img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                
+                                        <div class="col-lg-6 col-12">
+                                            <div class="section-block">
+                                                <div class="d-flex align-items-center my-3">
+                                                    <h4 class="mb-0">Ohm shanti oshana</h4>
+                                
+                                                    <span class="about-tag ms-2"></span>
+                                                </div>
+                                
+                                                <p>"My dear paaaruu, i know  this  movie 'Ohm Shanti Oshana' is your favorite one, I couldn't help but notice how much the character Pooja
+                                                reminded me of you. Just like Pooja, you are an incredibly talented and ambitious person who is not afraid to go after
+                                                what you want in life. You have a strong will, a kind heart, and a passion for music that sets you apart from everyone
+                                                else. You inspire me every day with your determination and your unwavering spirit, and I feel incredibly lucky to have
+                                                you in my life. So I just wanted to let you know that you are my very own Paaru, and I love you more than anything in
+                                                this world." </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="tab-pane fade show" id="nav-bridesmaid2" role="tabpanel" aria-labelledby="nav-bridesmaid-tab">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-12">
+                                            <div class="people-thumb image-hover-thumb">
+                                                <img src="images/nazriya.jpg" class="people-image img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                
+                                        <div class="col-lg-6 col-12">
+                                            <div class="section-block">
+                                                <div class="d-flex align-items-center my-3">
+                                                    <h4 class="mb-0">Nazriya</h4>
+                                
+                                                    <span class="about-tag ms-2"></span>
+                                                </div>
+                                
+                                                <p>Nazriya's talent and charm have captured Paaru's heart, and her love for the actress is a testament to her exquisite
+                                                taste and discerning eye.</p>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="col-lg-6 col-12">
+                                            <div class="people-thumb image-hover-thumb">
+                                                <img src="images/1.jpeg" class="people-image img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                
+                                        <div class="col-lg-6 col-12">
+                                            <div class="section-block">
+                                                <div class="d-flex align-items-center my-3">
+                                                    <h4 class="mb-0">Pearly Maaney</h4>
+                                
+                                                    <span class="about-tag ms-2"></span>
+                                                </div>
+                                
+                                                <p>Her love for Pearly Maaney runs deep - she feels every emotion along with her, shedding tears during
+                                                    Pearly's lows and
+                                                    sharing in her laughter during the highs." </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+        <!-- Carousel wrapper -->
+    <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel"
+        data-mdb-multi-items="27"  >
+
+            <!-- Controls -->
+            <div class="d-flex justify-content-center mb-4">
+                <button class="carousel-control-prev position-relative" type="button"
+                    data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next position-relative" type="button"
+                    data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- Inner -->
+            <div class="carousel-inner py-4">
+                <!-- Single item 1 -->
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img class="rounded-circle shadow-1-strong mb-4"
+                                    src="./images/akshara (1).jpg" alt="avatar"
+                                    style="width: 150px;" />
+                                <h5 class="mb-3">Akshara</h5>
+                                <p>Room-mate</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                Wish you a happy Birthday Sona chechii 😍. may you have lots of happy filled moments on your birthday and all the
+                                year through 🥳😍.
+                                </p>
+                              
+                            </div>
+
+                            <div class="col-lg-4 d-none d-lg-block ">
+                                <img class="rounded-circle shadow-1-strong mb-4" src="./images/alinaa (1).jpg   " alt="avatar"
+                                    style="width: 150px;" />
+                                <h5 class="mb-3">Alina</h5>
+                                <p>Childhood friend</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    To my fav grll.. My childhood frnd.
+                                    
+                                    അക്ഷരം തെറ്റാതെ കൂട്ടുകാരി ന്ന് വിളിക്കാൻ പഠിപ്പിച്ച പൊന്ന്.
+                                    ആരൊക്കെ വന്നാലും പോയാലും നിന്നെ പോലെ നീ മാത്രേ ഒള്ളടി. പെണ്ണെ...
+                                    I luvv u diiiiiii💋💋💋💋❤️❤️❤️❤️❤️
+                                    Misss u diiiiii.
+                                    SOMAA...
+                                    
+                                    
+                                    HAPPI BDAY MOLL...💖
+                                </p>
+                            
+                            </div>
+        
+                         
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <img class="rounded-circle shadow-1-strong mb-4"
+                                    src="./images/joicy cut (1).jpg" alt="avatar"
+                                    style="width: 150px;" />
+                                <h5 class="mb-3">Joicy</h5>
+                                <p>Room-mate</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    Happy Birthday Sona chechi 🥰 hope you have great day 😘 today and the year ahead is full of many blessings 🥳🥳
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Single item  2-->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 ">
+                                <img class="rounded-circle shadow-1-strong mb-4" src="./images/maya.png" alt="avatar" style="width: 150px;" />
+                                <h5 class="mb-3">Maya </h5>
+                                <p>Classmate</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    Wishing you a very happy birthday sonamon !!! May ALL your DREAMS (M) come true 😁😝😘💖
+                                    .
+                                </p>
+                            
+                            </div>
+        
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <img class="rounded-circle shadow-1-strong mb-4"
+                                    src="./images/devika.jpg" alt="avatar"
+                                    style="width: 150px;" />
+                                <h5 class="mb-3">Devu</h5>
+                                <p>Chilhood friend</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                Wishing you a Happiest birthday sonapp😍
+                                may you have lots of happy filled moments on your special day and her's to many more in the coming  year❤🫂😘
+                                </p>
+                               
+                            </div>
+        
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <img class="rounded-circle shadow-1-strong mb-4"
+                                    src="./images/shanu.jpg" alt="avatar"
+                                    style="width: 150px;" />
+                                <h5 class="mb-3">Shanu</h5>
+                                <p>Classmate</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                Happy happy bdy sona mol..hope uve the best day and a year filled with happiness💙🤍
+
+                                </p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Single item 3-->
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 ">
+                                <img class="rounded-circle shadow-1-strong mb-4" src="./images/joicy cut (1).jpg" alt="avatar"
+                                    style="width: 150px;" />
+                                <h5 class="mb-3">Joicy</h5>
+                                <p>Room-mate</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    Happy Birthday Sona chechi 🥰 hope you have great day 😘 today and the year ahead is full of many blessings 🥳🥳
+                                </p>
+                            
+                            </div>
+        
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <img class="rounded-circle shadow-1-strong mb-4" src="./images/chinnu.jpg" alt="avatar" style="width: 150px;" />
+                                <h5 class="mb-3">Chinnu</h5>
+                                <p>Room-mate</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    Happy Birthday Sona chechy may all your dreams come true ❤😍
+                            
+                                </p>
+                            
+                            </div>
+                            <div class="col-lg-4 d-none d-lg-block">
+                                <img class="rounded-circle shadow-1-strong mb-4" src="./images/devika.jpg" alt="avatar" style="width: 150px;" />
+                                <h5 class="mb-3">Devu</h5>
+                                <p>Chilhood friend</p>
+                                <p class="text-muted">
+                                    <i class="fas fa-quote-left pe-2"></i>
+                                    Wishing you a Happiest birthday sonapp😍
+                                    may you have lots of happy filled moments on your special day and her's to many more in the coming  year❤🫂😘
+                                </p>
+                            
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+    <!-- Single item 4 -->
+    <div class="carousel-item">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-4 ">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/alinaa (1).jpg   " alt="avatar"
+                    style="width: 150px;" />
+                <h5 class="mb-3">Alina</h5>
+                <p>Childhood friend</p>
+                <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    To my fav grll.. My childhood frnd.
+            
+                    അക്ഷരം തെറ്റാതെ കൂട്ടുകാരി ന്ന് വിളിക്കാൻ പഠിപ്പിച്ച പൊന്ന്.
+                    ആരൊക്കെ വന്നാലും പോയാലും നിന്നെ പോലെ നീ മാത്രേ ഒള്ളടി. പെണ്ണെ...
+                    I luvv u diiiiiii💋💋💋💋❤️❤️❤️❤️❤️
+                    Misss u diiiiii.
+                    SOMAA...
+            
+            
+                    HAPPI BDAY MOLL...💖
+                </p>
+            
+            </div>
+    
+            <div class="col-lg-4 d-none d-lg-block ">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/soma.jpg" alt="avatar" style="width: 150px;" />
+                <h5 class="mb-3">Soma</h5>
+                <p>Classmate</p>
+                <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Many many happy returns of the day sonaaaaaa❤️❤️
+                    May God bless you stay happy stay splash-left-heart-animEnjoy maddi
+                    And always keep smiling and keeping talking more and more 💞😊😊😊😊😊😊💞💞💞💞💞💞
+            
+                </p>
+            
+            </div>
+    
+                <div class="col-lg-4 d-none d-lg-block">
+                    <img class="rounded-circle shadow-1-strong mb-4" src="./images/shanu.jpg" alt="avatar" style="width: 150px;" />
+                    <h5 class="mb-3">Shanu</h5>
+                    <p>Classmate</p>
+                    <p class="text-muted">
+                        <i class="fas fa-quote-left pe-2"></i>
+                        Happy happy bdy sona mol..hope uve the best day and a year filled with happiness💙🤍
+                
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Single item 5 -->
+    <div class="carousel-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 ">
+                    <img class="rounded-circle shadow-1-strong mb-4" src="./images/devika.jpg" alt="avatar" style="width: 150px;" />
+                    <h5 class="mb-3">Devu</h5>
+                    <p>Classmate</p>
+                    <p class="text-muted">
+                        <i class="fas fa-quote-left pe-2"></i>
+                        Wishing you a Happiest birthday sonapp😍
+                        may you have lots of happy filled moments on your special day and her's to many more in the coming  year❤🫂😘
+                    </p>
+                
+                </div>
+
+                <div class="col-lg-4 d-none d-lg-block ">
+                    <img class="rounded-circle shadow-1-strong mb-4" src="./images/maya.png" alt="avatar" style="width: 150px;" />
+                    <h5 class="mb-3">Maya </h5>
+                    <p>Classmate</p>
+                    <p class="text-muted">
+                        <i class="fas fa-quote-left pe-2"></i>
+                        Wishing you a very happy birthday sonamon !!! May ALL your DREAMS (M) come true 😁😝😘💖
+                        .
+                    </p>
+                
+                </div>
+    
+                <div class="col-lg-4 d-none d-lg-block">
+                    <img class="rounded-circle shadow-1-strong mb-4" src="./images/akshara (1).jpg" alt="avatar"
+                        style="width: 150px;" />
+                    <h5 class="mb-3">Akshara</h5>
+                    <p>Room-mate</p>
+                    <p class="text-muted">
+                        <i class="fas fa-quote-left pe-2"></i>
+                        Wish you a happy Birthday Sona chechii 😍. may you have lots of happy filled moments on your birthday and all
+                        the
+                        year through 🥳😍.
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Single item 6 -->
+    <div class="carousel-item">
+        <div class="container">
+            <div class="row">
+            <div class="col-lg-4">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/shanu.jpg" alt="avatar" style="width: 150px;" />
+                <h5 class="mb-3">Shanu</h5>
+                <p>Classmate</p>
+                <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Happy happy bdy sona mol..hope u hve the best day and a year filled with happiness💙🤍
+            
+                </p>
+            
+            </div>
+    
+            <div class="col-lg-4 d-none d-lg-block">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images//nijil.jpg" alt="avatar" style="width: 150px;" />
+                <h5 class="mb-3">Nijil</h5>
+                <p>college junior</p>
+                <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Many many happy returns of the day dear Sona chechy I wish you a very wonderful birthday 🥰💕
+            
+                </p>
+            
+            </div>
+    
+            <div class="col-lg-4 d-none d-lg-block">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/shanu.jpg" alt="avatar" style="width: 150px;" />
+                <h5 class="mb-3">Shanu</h5>
+                <p>Classmate</p>
+                <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Happy happy bdy sona mol..hope u hve the best day and a year filled with happiness💙🤍
+            
+                </p>
+            
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single item 7-->
+    <div class="carousel-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 ">
+                    <img class="rounded-circle shadow-1-strong mb-4" src="./images/chinnu.jpg" alt="avatar"
+                        style="width: 150px;" />
+                    <h5 class="mb-3">Chinnu</h5>
+                    <p>Room-mate</p>
+                    <p class="text-muted">
+                        <i class="fas fa-quote-left pe-2"></i>
+                    Happy Birthday Sona chechy may all your dreams come true ❤😍
+
+                    </p>
+    
+                </div>
+    
+                <div class="col-lg-4 d-none d-lg-block ">
+                    <img class="rounded-circle shadow-1-strong mb-4" src="./images/alinaa (1).jpg   " alt="avatar"
+                        style="width: 150px;" />
+                    <h5 class="mb-3">Alina</h5>
+                    <p>Childhood friend</p>
+                    <p class="text-muted">
+                        <i class="fas fa-quote-left pe-2"></i>
+                        To my fav grll.. My childhood frnd.
+    
+                        അക്ഷരം തെറ്റാതെ കൂട്ടുകാരി ന്ന് വിളിക്കാൻ പഠിപ്പിച്ച പൊന്ന്.
+                        ആരൊക്കെ വന്നാലും പോയാലും നിന്നെ പോലെ നീ മാത്രേ ഒള്ളടി. പെണ്ണെ...
+                        I luvv u diiiiiii💋💋💋💋❤️❤️❤️❤️❤️
+                        Misss u diiiiii.
+                        SOMAA...
+    
+    
+                        HAPPI BDAY MOLL...💖
+                    </p>
+    
+                </div>
+                <div class="col-lg-4 d-none d-lg-block ">
+                    <img class="rounded-circle shadow-1-strong mb-4" src="./images/soma.jpg" alt="avatar" style="width: 150px;" />
+                    <h5 class="mb-3">Soma</h5>
+                    <p>Classmate</p>
+                    <p class="text-muted">
+                        <i class="fas fa-quote-left pe-2"></i>
+                        Many many happy returns of the day sonaaaaaa❤️❤️
+                        May God bless you stay happy stay splash-left-heart-animEnjoy maddi
+                        And always keep smiling and keeping talking more and more 💞😊😊😊😊😊😊💞💞💞💞💞💞
+                
+                    </p>
+                
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Single item 8-->
+    <div class="carousel-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 ">
+                    <img class="rounded-circle shadow-1-strong mb-4" src="./images//nijil.jpg" alt="avatar"
+                        style="width: 150px;" />
+                    <h5 class="mb-3">Nijil</h5>
+                    <p>college junior</p>
+                    <p class="text-muted">
+                        <i class="fas fa-quote-left pe-2"></i>
+                    Many many happy returns of the day dear Sona chechy I wish you a very wonderful birthday 🥰💕
+
+                    </p>
+    
+                </div>
+    
+            <div class="col-lg-4 d-none d-lg-block">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/joicy cut (1).jpg" alt="avatar"
+                    style="width: 150px;" />
+                <h5 class="mb-3">Joicy</h5>
+                <p>Room-mate</p>
+                <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Happy Birthday Sona chechi 🥰 hope you have great day 😘 today and the year ahead is full of many blessings 🥳🥳
+                </p>
+            
+            </div>
+            
+            
+            <div class="col-lg-4 d-none d-lg-block">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/akshara (1).jpg" alt="avatar"
+                    style="width: 150px;" />
+                <h5 class="mb-3">Akshara</h5>
+                <p>Room-mate</p>
+                <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Wish you a happy Birthday Sona chechii 😍. may you have lots of happy filled moments on your birthday and all
+                    the
+                    year through 🥳😍.
+                </p>
+            
+            </div>
+    
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Single item 9-->
+    <div class="carousel-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 ">
+                    <img class="rounded-circle shadow-1-strong mb-4" src="./images/soma.jpg" alt="avatar"
+                        style="width: 150px;" />
+                    <h5 class="mb-3">Soma</h5>
+                    <p>Classmate</p>
+                    <p class="text-muted">
+                        <i class="fas fa-quote-left pe-2"></i>
+                        Many many happy returns of the day sonaaaaaa❤️❤️
+                        May God bless you stay happy stay splash-left-heart-animEnjoy maddi
+                        And always keep smiling and keeping talking more and more 💞😊😊😊😊😊😊💞💞💞💞💞💞
+    
+                    </p>
+    
+                </div>
+    
+            <div class="col-lg-4 d-none d-lg-block">
+                <img class="rounded-circle shadow-1-strong mb-4" src="./images/shanu.jpg" alt="avatar" style="width: 150px;" />
+                <h5 class="mb-3">Shanu</h5>
+                <p>Classmate</p>
+                <p class="text-muted">
+                    <i class="fas fa-quote-left pe-2"></i>
+                    Happy happy bdy sona mol..hope u hve the best day and a year filled with happiness💙🤍
+            
+                </p>
+            
+            </div>
+    
+    
+                <div class="col-lg-4 d-none d-lg-block ">
+                    <img class="rounded-circle shadow-1-strong mb-4" src="./images/maya.png" alt="avatar" style="width: 150px;" />
+                    <h5 class="mb-3">Maya </h5>
+                    <p>Classmate</p>
+                    <p class="text-muted">
+                        <i class="fas fa-quote-left pe-2"></i>
+                        Wishing you a very happy birthday sonamon !!! May ALL your DREAMS (M) come true 😁😝😘💖
+                        .
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+            </div>
+            <!-- Inner -->
+        </div>
+        <!-- Carousel wrapper -->
+
+
+
+            <section class="gallery-section section-bg section-padding" id="section_5">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h2 class="section-title">Snapshots</h2>
+
+                                <div class="section-title-bottom">
+                                    <span class="section-title-line"></span>
+                                    <i class="section-title-icon bi-heart-fill"></i>
+                                    <span class="section-title-line"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <div class="gallery-thumb image-hover-thumb">
+                                <a href="images/1.jpg" class="popup-image">
+                                    <img src="images/1.jpg" class="gallery-image img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12 d-flex flex-column">
+                            <div class="gallery-thumb gallery-thumb-small image-hover-thumb">
+                                <a href="images/2.jpg" class="popup-image">
+                                    <img src="images/2.jpg" class="gallery-image img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <div class="gallery-thumb gallery-thumb-small image-hover-thumb">
+                                <a href="images/sona1.jpg" class="popup-image">
+                                    <img src="images/sona1.jpg" class="gallery-image img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                       
+
+                        <div class="col-lg-4 col-12 d-flex flex-column">
+                            <div class="gallery-thumb gallery-thumb-small image-hover-thumb">
+                                <a href="images/5.jpg" class="popup-image">
+                                    <img src="images/5.jpg" class="gallery-image img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <div class="gallery-thumb gallery-thumb-small image-hover-thumb">
+                                <a href="images/6.jpg" class="popup-image">
+                                    <img src="images/6.jpg" class="gallery-image img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12">
+                            <div class="gallery-thumb image-hover-thumb">
+                                <a href="images/8.jpg" class="popup-image">
+                                    <img src="images/8.jpg" class="gallery-image img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-12 d-flex flex-column">
+                            <div class="gallery-thumb gallery-thumb-small image-hover-thumb">
+                                <a href="images/sona2.jpg" class="popup-image">
+                                    <img src="images/sona2.jpg" class="gallery-image img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <!-- <div class="gallery-thumb gallery-thumb-small image-hover-thumb">
+                                <a href="images/10.jpg" class="popup-image">
+                                    <img src="images/10.jpg" class="gallery-image img-fluid" alt="">
+                                </a>
+                            </div> -->
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="rsvp-section section-padding" id="section_6">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <div class="rsvp-form-wrap">
+                                <div class="section-title-wrap mb-5">
+                                    <h2 class="section-title">Wish her 🎂</h2>
+
+                                    <div class="section-title-bottom">
+                                        <span class="section-title-line"></span>
+                                        <i class="section-title-icon bi-heart-fill"></i>
+                                        <span class="section-title-line"></span>
+                                    </div>
+                                </div>
+
+                                <h5 class="mb-4">Write your  <span class="text-muted">heartfelt wishes</span></h5>
+
+                                <form class="custom-form rsvp-form" role="form" action="" id="submit-form" ;return false">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6 col-12">
+                                            <input type="text" name="name" id="name" class="form-control" placeholder="We'd love to know your name 😊" required="">
+                                        </div>
+
+                                        <div class="col-lg-4 col-md-6 col-12"> 
+                                            <input type="text" name="place" id="email"  class="form-control" placeholder="Place 🏠" required="">
+                                        </div>
+
+                                        <div class="col-lg-4 col-12"> 
+                                            <select name="gifts_from_friends" class="form-select" id="guests" aria-label="Guests">
+                                                <option selected>Give her something to cherish</option>
+                                                <option value="gift">🎁</option>
+                                                <option value="cake">🎂</option>
+                                                <option value="flower">💐</option>
+                                                <option value="icecream">🍦</option>
+                                                <option value="sweet">🥫</option>
+                                                <option value="candy">🍬</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-lg-12 col-12">
+                                            <textarea class="form-control" id="message" name="message" placeholder="Pen your heartfelt greetings 😍" rows="5"></textarea>
+                                        </div>
+
+                                        <div class="col-lg-3 col-5 mx-auto">
+                                            <button type="submit" class="form-control">Share your birthday cheer</button>
+                                        </div>
+
+                                    </div>
+                                </form>
+                                <div id="alert-message"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section section-bg section-padding" id="section_7">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-12">
+                            <div class="section-title-wrap mb-5">
+                                <h2 class="section-title">Get in touch</h2>
+
+                                <div class="section-title-bottom">
+                                    <span class="section-title-line"></span>
+                                    <i class="section-title-icon bi-heart-fill"></i>
+                                    <span class="section-title-line"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <h4 class="mb-4">Visit Us</h4>
+
+                            <p> Our address will be update 
+                            <br> After our official marriage. 😉</p>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12 my-4 my-lg-0 my-md-0">
+                            <h4 class="mb-4">Contact Information</h4>
+
+                            <p class="mb-2">
+                                <a href="mailto:1305beats@gmail.com">
+                                    1305beats@gmail.com
+                                </a>
+                            </p>
+
+                            <!-- <p>
+                                <a href="tel: 1305">
+                                    89******17
+                                </a>
+                            </p> -->
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <h4 class="mb-4">Socials</h4>
+
+                            <ul class="social-icon">
+                                <li class="social-icon-item"><a href="https://twitter.com/manukrishna1305" class="social-icon-link bi-twitter"></a></li>
+
+                                <li class="social-icon-item"><a href="https://www.instagram.com/m05j13s/" class="social-icon-link bi-instagram"></a></li>
+
+                                <!-- <li class="social-icon-item"><a href="#" class="social-icon-link bi-whatsapp"></a></li> -->
+
+                                <li class="social-icon-item"><a href="https://www.facebook.com/Manu.kallooppara" target="_blank" class="social-icon-link bi-facebook"></a></li>
+                                <li class="social-icon-item"><a href="https://t.me/m1305s" target="_blank"
+                                        class="social-icon-link bi-telegram"></a></li>
+
+                            </ul>
+
+                           
+                        </div>
+
+                    </div>
+                    <br>
+                    <br>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <h4 class="mb-4">Overall views</h4>
+                    <h1 id="countss" style="color: #F05157;">
+                    
+                        0
+                    </h1><span>😍thank you</span>
+                    
+                    
+                    
+                    </div>
+                    
+                    </div>
+                    
+                </div>
+                
+                
+               
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                   
+
+                    <div class="col-lg-3 col-12     mx-auto">
+                        <a href="#" class="navbar-brand mx-auto mx-lg-0">
+                            <span>Sona </span>
+                            <i class="bi-heart brand-icon"></i>
+                            <span>Manu</span>
+                        </a>
+                    </div>
+                    <p class="copyright-text mt-3 mb-0">
+                       
+                        <br> Creation:<a href="https://api.whatsapp.com/send?phone=+91 8943293217 &text=Hi, I saw your website and I'm interested in working with you. Can we discuss my project further?" target="_blank">MaNu</a>
+                    </p>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/magnific-popup-options.js"></script>
+        <script src="js/custom.js"></script>
+        <script src=" https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            $("#submit-form").submit((e) => {
+                e.preventDefault()
+                var name1 = document.getElementById("name").value
+                $.ajax({
+                    url: "https://script.google.com/macros/s/AKfycbwSaxqlsTEPJoNY60PFynX0cgROmTsOH12Q3LEAqO4P5KBrCMD8JAUZ0mx1AvUtY-3t/exec",
+                    data: $("#submit-form").serialize(),
+                    method: "post",
+                    success: function (response) {
+                      Swal.fire({
+                            title: `Thank you ${name1} for your response!😍❤️`,
+
+
+                            showClass: {
+                                popup: 'animate__backInUp'
+                            },
+                            hideClass: {
+                                popup: 'animate__backOutDown'
+                            }
+                            , confirmButtonText: "👍",
+                        })
+                        $("#submit-form input[type=text], #submit-form input[type=text], #submit-form textarea").val("");
+
+                        //window.location.href="https://google.com"
+                    },
+                    error: function (err) {
+                        alert("Something Error")
+
+                    }
+                })
+            })
+            
+        </script>
+        
+         <script>
+
+            const countEl =document.getElementById('countss')
+            updateCount()
+            function updateCount(){
+                fetch('https://api.countapi.xyz/update/1305.love/love/?amount=1')
+                .then(res=>res.json())
+                .then(res=>{
+                    countEl.innerHTML=res.value;
+                })
+            }
+
+
+
+
+
+        </script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="sweetalert2.all.min.js"></script>
+        <script src="sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="sweetalert2.min.css">
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
+        -->
+       
+    </body>
+</html>
